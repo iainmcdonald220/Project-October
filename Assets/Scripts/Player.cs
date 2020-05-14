@@ -9,8 +9,11 @@ public class Player : MonoBehaviour
 
     public CharacterController CharCtrl;
 
+    
+    public GameObject _LaserPrefab;
+
     private float smooth = 5.0f;
-    private float tiltAngle = 60.0f;
+    private float tiltAngle = 90.0f;
 
 
     void Start()
@@ -55,6 +58,13 @@ public class Player : MonoBehaviour
         else if (transform.position.z < 0.0f)
         {
             transform.position = new Vector3(0, transform.position.y, -4);
+        }
+
+        //shooting
+        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            Debug.Log("Button Pressed");
+            Instantiate(_LaserPrefab, transform.position, Quaternion.identity);
         }
 
 
