@@ -57,6 +57,16 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(0, transform.position.y, -4);
         }
 
+<<<<<<< Updated upstream
+=======
+        //shooting
+        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            Debug.Log("Button Pressed");
+            Instantiate(_LaserPrefab, transform.position, transform.rotation);
+        }
+
+>>>>>>> Stashed changes
 
     }
 }
