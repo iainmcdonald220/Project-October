@@ -9,8 +9,17 @@ public class Player : MonoBehaviour
 
     public CharacterController CharCtrl;
 
+    [SerializeField]
+    private GameObject _redLaser;
+    [SerializeField]
+    private GameObject _blueLaser;
+    [SerializeField]
+    private GameObject _yellowLaser;
+    [SerializeField]
+    private GameObject _greenLaser;
+
     private float smooth = 5.0f;
-    private float tiltAngle = 60.0f;
+    private float tiltAngle = 90.0f;
 
 
     void Start()
@@ -57,16 +66,30 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(0, transform.position.y, -4);
         }
 
-<<<<<<< Updated upstream
-=======
-        //shooting
+
+        //shooting - 
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+        {
+            Debug.Log("Button0");
+            Instantiate(_greenLaser, transform.position, transform.rotation);
+        }
         if (Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
-            Debug.Log("Button Pressed");
-            Instantiate(_LaserPrefab, transform.position, transform.rotation);
+            Debug.Log("Button1");
+            Instantiate(_redLaser, transform.position, transform.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+        {
+            Debug.Log("Button2");
+            Instantiate(_blueLaser, transform.position, transform.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+        {
+            Debug.Log("Button3");
+            Instantiate(_yellowLaser, transform.position, transform.rotation);
         }
 
->>>>>>> Stashed changes
+
 
     }
 }
