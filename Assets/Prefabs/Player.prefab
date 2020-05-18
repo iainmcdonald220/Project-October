@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharCtrl: {fileID: 0}
-  _redLaser: {fileID: 3765948821130726312, guid: 2d7a459e9abcc0847a823f2cd30e4d9b,
+  _redLaser: {fileID: 3765948821130726312, guid: 0ed2237a6fafd4148bc218998a6aac64,
     type: 3}
   _blueLaser: {fileID: 3765948821130726312, guid: 714319db45c92e340b387984f75a96f5,
     type: 3}

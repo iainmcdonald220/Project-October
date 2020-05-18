@@ -396,6 +396,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 713820247, guid: 5387b0360beefd348a3e1f573998cd4b, type: 3}
+      propertyPath: _redLaser
+      value: 
+      objectReference: {fileID: 3765948821130726312, guid: 2d7a459e9abcc0847a823f2cd30e4d9b,
+        type: 3}
     - target: {fileID: 5560134573478415260, guid: 5387b0360beefd348a3e1f573998cd4b,
         type: 3}
       propertyPath: m_Name

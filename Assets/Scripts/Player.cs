@@ -9,14 +9,11 @@ public class Player : MonoBehaviour
 
     public CharacterController CharCtrl;
 
-    [SerializeField]
-    private GameObject _redLaser;
-    [SerializeField]
-    private GameObject _blueLaser;
-    [SerializeField]
-    private GameObject _yellowLaser;
-    [SerializeField]
-    private GameObject _greenLaser;
+
+    public GameObject _redLaser;
+    public GameObject _blueLaser;
+    public GameObject _yellowLaser;    
+    public GameObject _greenLaser;
 
     private float smooth = 5.0f;
     private float tiltAngle = 90.0f;
@@ -67,7 +64,7 @@ public class Player : MonoBehaviour
         }
 
 
-        //shooting - 
+        //shooting - different buttons on the pad fire different coloured lasers
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             Debug.Log("Button0");

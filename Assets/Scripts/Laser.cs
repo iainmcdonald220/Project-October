@@ -22,6 +22,21 @@ public class Laser : MonoBehaviour
         // laser shoots - movement forward from player
         transform.Translate(Vector3.forward * _laserSpeed * Time.deltaTime);
 
+        if (transform.position.z > 15.0f)
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (transform.position.x > 15.0f)
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (transform.position.x < -15.0f)
+        {
+            Destroy(this.gameObject);
+        }
+
 
     }
 }
