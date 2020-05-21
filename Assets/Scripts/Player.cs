@@ -45,6 +45,9 @@ public class Player : MonoBehaviour
         //     transform.rotation = Quaternion.LookRotation(NextDir);
         // CharCtrl.Move(NextDir / 8);
 
+
+        //player position restriction (cannot actually move)
+
         if (transform.position.x > 0.0f)
         {
             transform.position = new Vector3(0, transform.position.y, -4);
@@ -64,7 +67,7 @@ public class Player : MonoBehaviour
         }
 
 
-        //shooting - different buttons on the pad fire different coloured lasers
+        //shooting - different buttons on the pad fires different coloured lasers
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             Debug.Log("Button0");

@@ -19,9 +19,10 @@ public class Laser : MonoBehaviour
     void Update()
     {
 
-        // laser shoots - movement forward from player
+        //shoots the laser forward from player's current facing position
         transform.Translate(Vector3.forward * _laserSpeed * Time.deltaTime);
 
+        //destroys laser prefab if it passes outside of game view
         if (transform.position.z > 15.0f)
         {
             Destroy(this.gameObject);
